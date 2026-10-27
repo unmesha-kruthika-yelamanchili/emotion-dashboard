@@ -89,7 +89,7 @@ class EmotionPredictor:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.batch_size = batch_size
         self.model = IndicW2VEmotion()
-        state = torch.load(weights_path, map_location="cpu", weights_only=True)
+        state = torch.load(weights_path, map_location="cpu", weights_only=False)
         self.model.load_state_dict(state, strict=True)   # strict: fail loudly on any mismatch
         self.model.to(self.device).eval()
 
