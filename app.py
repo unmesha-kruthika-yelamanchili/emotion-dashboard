@@ -124,7 +124,7 @@ with st.sidebar:
 # main
 # ----------------------------------------------------------------------------
 st.title("🎙️ Speech Emotion Dashboard")
-st.caption("Emotion predictions from a fine-tuned IndicWav2Vec model on open-source education and election audio.")
+st.caption("Emotion predictions from a fine-tuned IndicWav2Vec model on open-source audio of indicVoice from AI4 Bharath.")
 
 tab_dash, tab_live = st.tabs(["Dashboard", "Try a clip"])
 
