@@ -1,0 +1,3 @@
+Audio clips from IndicVoices (AI4Bharat), licensed CC BY 4.0.
+https://huggingface.co/datasets/ai4bharat/IndicVoices
+Clips were resampled to 16 kHz mono WAV.
