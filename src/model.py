@@ -89,6 +89,10 @@ class EmotionPredictor:
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.batch_size = batch_size
         self.model = IndicW2VEmotion()
+        print("MODEL PATH:", weights_path)
+        print("MODEL EXISTS:", weights_path.exists())
+        print("MODEL SIZE:", weights_path.stat().st_size if weights_path.exists() else "MISSING")
+        print("MODEL HEADER:", weights_path.open("rb").read(80) if weights_path.exists() else "MISSING")
         state = torch.load(weights_path, map_location="cpu", weights_only=False)
         self.model.load_state_dict(state, strict=True)   # strict: fail loudly on any mismatch
         self.model.to(self.device).eval()
